@@ -1,3 +1,5 @@
+import { Skeleton } from "@/components/ui/skeleton";
+
 export const Toolbar = () => {
     return (
         //remove the position absolute with fixed
@@ -21,3 +23,11 @@ export const Toolbar = () => {
         </div>
     );
 };
+Toolbar.Skeleton = function ToolBarSkeleton() {
+    return (
+        <div className="fixed left-2 top-[50%] -translate-y-[50%] flex flex-col gap-y-4 bg-white h-[360px] w-[52px]">
+            <Skeleton className="h-full w-full bg-muted-400" />
+
+        </div>
+    )
+} 
